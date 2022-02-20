@@ -71,60 +71,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-跳跃游戏-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F-1/" class="article-date">
-  <time class="dt-published" datetime="2022-02-20T11:56:13.000Z" itemprop="datePublished">2022-02-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F-1/">跳跃游戏</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="跳跃游戏"><a href="#跳跃游戏" class="headerlink" title="跳跃游戏"></a>跳跃游戏</h3><p>给定一个非负整数数组 <code>nums</code> ，你最初位于数组的 第一个下标 。</p>
-<p>数组中的每个元素代表你在该位置可以跳跃的最大长度。</p>
-<p>判断你是否能够到达最后一个下标。</p>
-<p>eg：<br>输入：<code>nums</code> &#x3D; [2,3,1,1,4]<br>输出：true<br>解释：可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标。<br>输入：<code>nums</code> &#x3D; [3,2,1,0,4]<br>输出：false<br>解释：无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0 ， 所以永远不可能到达最后一个下标。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">canJump</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">farthermost</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt;= farthermost &amp;&amp; i &lt; nums.length; i++) &#123;</span><br><span class="line">            farthermost = Math.max(farthermost, i + nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> farthermost &gt;= nums.length - <span class="number">1</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>个人对本题的理解：</li>
-</ul>
-<p>1.定义一个变量farthermost表示到达的最远下标，赋一个初始值0，表示当前位于数组的第一个下标。</p>
-<p>2.接下来进入for循环。意味着对该数组进行遍历。<code>i</code>表示当前所在数组下标的位置，<code>nums[i]</code>表示可以跳跃的长度，<code>i + num[i]</code>表示最远可以跳到下标为<code>i + num[i]</code>的位置，若此时farthermost大于上一个i所对应的数值，则更新farthermost为最大值。</p>
-<p>3.如果恰好能完成一次遍历或者能到达的最远下标超出了最远下标时，退出循环。最后返回可以跳跃最远的下标即可。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F-1/" data-id="ckzv8lccn0003h8vm51s09z2j" data-title="跳跃游戏" class="article-share-link">Share</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jump/" rel="tag">jump</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-跳跃游戏" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" class="article-date">
@@ -163,7 +109,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" data-id="ckzv8lccs0007h8vm1jszczbz" data-title="跳跃游戏" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/" data-id="ckzv95n3k0002povmhm6x2evg" data-title="跳跃游戏" class="article-share-link">Share</a>
       
       
       
@@ -215,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/%E7%9B%9B%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/" data-id="ckzv8lccg0000h8vm83wr0rn3" data-title="盛水的容器" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/20/%E7%9B%9B%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/" data-id="ckzv95n3f0000povm7hjmbqza" data-title="盛水的容器" class="article-share-link">Share</a>
       
       
       
@@ -268,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/20/hello-world/" data-id="ckzv8lcck0001h8vm1ag8gsxu" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/02/20/hello-world/" data-id="ckzv95n3m0005povm7dv4erhy" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -303,7 +249,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/bar/" style="font-size: 10px;">bar</a> <a href="/tags/jump/" style="font-size: 20px;">jump</a>
+      <a href="/tags/bar/" style="font-size: 10px;">bar</a> <a href="/tags/jump/" style="font-size: 10px;">jump</a>
     </div>
   </div>
 
@@ -323,10 +269,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F-1/">跳跃游戏</a>
-          </li>
         
           <li>
             <a href="/2022/02/20/%E8%B7%B3%E8%B7%83%E6%B8%B8%E6%88%8F/">跳跃游戏</a>
